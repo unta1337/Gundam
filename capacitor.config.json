@@ -1,0 +1,8 @@
+{
+  "appId": "com.gunpla.spend",
+  "appName": "건프라 지출",
+  "webDir": "www",
+  "backgroundColor": "#0b0f19",
+  "ios": { "contentInset": "never", "backgroundColor": "#0b0f19" },
+  "android": { "backgroundColor": "#0b0f19", "allowMixedContent": false }
+}

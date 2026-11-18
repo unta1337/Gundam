@@ -1,0 +1,30 @@
+{
+  "name": "gunpla-spend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline personal Gunpla spending tracker for Android and iOS",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "sync": "npm run build && cap sync",
+    "android": "npm run build && cap sync android && cap open android",
+    "ios": "npm run build && cap sync ios && cap open ios",
+    "test": "node --test tests/*.spec.cjs"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.6.2",
+    "@capacitor/app": "8.1.2",
+    "@capacitor/core": "8.6.2",
+    "@capacitor/filesystem": "8.1.5",
+    "@capacitor/ios": "8.6.2",
+    "@capacitor/preferences": "8.0.1",
+    "@capacitor/share": "8.0.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.6.2",
+    "esbuild": "0.25.0",
+    "playwright": "1.56.1"
+  }
+}

@@ -1,0 +1,14 @@
+node_modules/
+www/
+.DS_Store
+android/.gradle/
+android/.idea/
+android/local.properties
+android/**/build/
+ios/App/Pods/
+ios/App/build/
+**/xcuserdata/
+*.keystore
+*.jks
+*.p12
+*.mobileprovision
