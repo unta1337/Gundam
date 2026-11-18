@@ -56,3 +56,8 @@ npm test
 Windows에서 설치된 Edge를 사용하려면 `$env:PW_CHANNEL = 'msedge'`를 설정하고 `npm test`를 실행할 수 있습니다. 테스트는 실제 브라우저에서 HTML 기능과 Capacitor 연결 코드를 검증합니다. OS 플러그인은 테스트용으로 대체하므로, 배포 전 Android/iPhone에서 파일 선택·공유·재실행 후 데이터 유지·화면 여백을 확인해야 합니다. 네이티브 빌드와 서명은 해당 플랫폼 도구가 필요합니다.
 
 참고: [개발 환경](https://capacitorjs.com/docs/getting-started/environment-setup), [기기 저장](https://capacitorjs.com/docs/apis/preferences), [파일 공유](https://capacitorjs.com/docs/apis/share).
+
+## 기여자
+
+- [unta1337](https://github.com/unta1337): 프로젝트 기획, 요구사항 및 저장소 관리.
+- [OpenAI Codex](https://github.com/codex): 앱 안정화, Android/iOS 패키징 구성, 자동 테스트 및 원격 Android 빌드 구현 지원.
