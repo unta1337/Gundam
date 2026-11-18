@@ -1,0 +1,16 @@
+import org.gradle.api.artifacts.repositories.MavenArtifactRepository
+
+// Hosted runner IPs can hit Maven Central's request limit (HTTP 429).
+// Google publishes the same artifacts at this documented Central mirror:
+// https://storage-download.googleapis.com/maven-central/index.html
+// Apply to plugin build scripts too, without modifying node_modules.
+gradle.beforeProject { project ->
+    def useCentralMirror = { repository ->
+        if (repository instanceof MavenArtifactRepository &&
+            repository.url.host in ['repo.maven.apache.org', 'repo1.maven.org']) {
+            repository.setUrl('https://maven-central.storage-download.googleapis.com/maven2/')
+        }
+    }
+    project.buildscript.repositories.all(useCentralMirror)
+    project.repositories.all(useCentralMirror)
+}
